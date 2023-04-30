@@ -10,6 +10,15 @@ function App() {
         setCount(count + 1)
     }
 
+    function resetCount() {
+        setCount(0)
+    }
+
+    let buttonStyle = {
+        backgroundColor: 'red',
+        color: 'white',
+    }
+
     return (
         <div className="App">
             <Counter newNumber={count} />
@@ -18,6 +27,14 @@ function App() {
             <Button functionForOnClick={incrementCount} />
             <Button functionForOnClick={incrementCount} />
             <Button functionForOnClick={incrementCount} />
+
+            {count > 0 && (
+                <div>
+                    <button style={buttonStyle} onClick={resetCount}>
+                        Reset 
+                    </button>
+                </div>
+            )}
         </div>
     )
 }

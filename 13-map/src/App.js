@@ -10,14 +10,21 @@ function App() {
         setCount(count + 1)
     }
 
+    const texts = ['click me', 'click me please', 'hit me', 'press me']
+
     return (
         <div className="App">
             <Counter newNumber={count} />
 
-            <Button functionForOnClick={incrementCount} />
-            <Button functionForOnClick={incrementCount} />
-            <Button functionForOnClick={incrementCount} />
-            <Button functionForOnClick={incrementCount} />
+            {texts.map((arrItem, index) => {
+                return (
+                    <Button
+                        text={arrItem}
+                        functionForOnClick={incrementCount}
+                        key={index}
+                    />
+                )
+            })}
         </div>
     )
 }

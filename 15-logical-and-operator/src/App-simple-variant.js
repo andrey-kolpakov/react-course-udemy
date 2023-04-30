@@ -6,18 +6,14 @@ import Button from './components/Button'
 function App() {
     const [count, setCount] = useState(0)
 
-    function incrementCount() {
-        setCount(count + 1)
-    }
-
     return (
         <div className="App">
             <Counter newNumber={count} />
 
-            <Button functionForOnClick={incrementCount} />
-            <Button functionForOnClick={incrementCount} />
-            <Button functionForOnClick={incrementCount} />
-            <Button functionForOnClick={incrementCount} />
+            <Button clickOnButtonComponent={setCount} count={count} />
+            <Button clickOnButtonComponent={setCount} count={count} />
+            <Button clickOnButtonComponent={setCount} count={count} />
+            <Button clickOnButtonComponent={setCount} count={count} />
         </div>
     )
 }

@@ -1,0 +1,21 @@
+.App {
+    text-align: center;
+}
+
+.persons-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.person-card {
+    background-color: lightblue;
+    padding: 10px;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
