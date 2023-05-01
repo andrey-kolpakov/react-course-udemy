@@ -1,0 +1,27 @@
+.App {
+    text-align: center;
+}
+
+.card {
+    width: 450px;
+    height: 150px;
+
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 1px solid lightgray;
+    box-shadow: 1px 1px 3px rgb(235, 235, 235);
+}
+
+
+
+.cards-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
