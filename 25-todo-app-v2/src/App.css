@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+
+  width: 500px;
+  margin: 20px auto;
+}
+
+h1, h2{
+  color: white;
+}

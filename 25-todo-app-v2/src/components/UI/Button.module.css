@@ -1,0 +1,15 @@
+.button{
+    cursor: pointer;
+
+    padding:5px 15px;
+    border-radius: 5px;
+    border: none;
+
+    background-color: rgb(218, 210, 179);
+
+    transition: all .3s ease-in-out;
+}
+
+.button:hover{
+    background-color: rgb(231, 231, 231);
+}
