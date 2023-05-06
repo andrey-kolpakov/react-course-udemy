@@ -1,8 +1,8 @@
 import Todo from './Todo'
 import styles from './TodoList.module.css'
 
-function TodoList({ TodoListArray, deleteTodo }) {
-    console.log()
+function TodoList({ TodoListArray, deleteTodo, checkTodo }) {
+    // console.log(checkTodo)
 
     return (
         <div className={styles.todoList}>
@@ -18,6 +18,8 @@ function TodoList({ TodoListArray, deleteTodo }) {
                         key={currentItem.id}
                         deleteTodo={deleteTodo}
                         index={currentItem.id}
+                        checkTodo={checkTodo}
+                        isCompleted={currentItem.isCompleted}
                     />
                 )
             })}

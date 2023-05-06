@@ -1,9 +1,9 @@
 import styles from './Button.module.css'
 
-function Button(){
+function Button({text, onClick, children}){
     return (
-        <button className={styles.button}>
-            Добавить
+        <button className={styles.button} onClick={onClick}>
+            {children}
         </button>
     )
 }

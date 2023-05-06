@@ -1,0 +1,5 @@
+.TodosActionsContainer {
+    display: flex;
+    height: 40px;
+    gap: 20px;
+}

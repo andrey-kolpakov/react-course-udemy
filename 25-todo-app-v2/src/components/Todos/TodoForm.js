@@ -28,7 +28,7 @@ function TodoForm({ addTodoHandler }) {
                     setTextForTodo(evt.target.value)
                 }}
             />
-            <Button />
+            <Button>Добавить</Button>
         </form>
     )
 }
