@@ -36,8 +36,6 @@ function Courses() {
         } 
     }, [sortKey, navigateFromCoursesSort])
 
-    
-
     return (
         <>
             <h1>{sortKey ? `Courses sorted by ${sortKey}` : ''}</h1>
