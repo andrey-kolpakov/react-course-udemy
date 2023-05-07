@@ -4,24 +4,12 @@ import TodoForm from './components/Todos/TodoForm'
 import TodoList from './components/Todos/TodoList'
 import TodosActions from './components/Todos/TodosActions'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
 function App() {
     const [TodoListArray, setTodoList] = useState([])
-    console.log('Current state', TodoListArray)
-
-    useEffect(() => {
-        function lockAButton() {
-            console.log('123')
-        }
-
-        for (let todo of TodoListArray) {
-            if (todo.isCompleted === true) {
-                lockAButton()
-            }
-        }
-    }, [TodoListArray])
+    // console.log('Current state', TodoListArray)
 
     function addTodoHandler(newText) {
         const newTodo = {
@@ -81,16 +69,28 @@ function App() {
         )
     }
 
+
+    let itterator = 0
+    const itteratorOfCompletedTodos = function () {
+        for (let item of TodoListArray) {
+            if (item.isCompleted) {
+                itterator++
+            }
+        }
+    }
+    itteratorOfCompletedTodos()
+
     return (
         <div className="App">
             <h1>Todo List v1</h1>
 
-            <TodoForm addTodoHandler={addTodoHandler} />
+            <TodoForm addTodoHandler={addTodoHandler}/>
 
             {TodoListArray.length > 0 ? (
                 <TodosActions
                     deleteCompletedTodoHandler={deleteCompletedTodoHandler}
                     resetHandler={resetHandler}
+                    itterator={itterator}
                 />
             ) : (
                 ''
@@ -101,6 +101,8 @@ function App() {
                 deleteTodo={deleteTodoHandler}
                 checkTodo={checkTodoHandler}
             />
+
+            <h2>{itterator > 0 ? `Вы закончили ${itterator} заданий` : ''}</h2>
         </div>
     )
 }

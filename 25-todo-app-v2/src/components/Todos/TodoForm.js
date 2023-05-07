@@ -14,6 +14,8 @@ function TodoForm({ addTodoHandler }) {
         }
     }
 
+
+
     return (
         <form
             className={styles.todoForm}
@@ -28,7 +30,7 @@ function TodoForm({ addTodoHandler }) {
                     setTextForTodo(evt.target.value)
                 }}
             />
-            <Button>Добавить</Button>
+            <Button disabled={textForTodo.length > 0 ? false : true}>Добавить</Button>
         </form>
     )
 }
