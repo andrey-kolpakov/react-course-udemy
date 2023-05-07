@@ -1,0 +1,76 @@
+body {
+    padding: 20px 20px;
+}
+
+.app {
+    width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+a {
+    color: lightblue;
+    font-size: 35px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    background-color: rgb(91, 132, 146);
+    border-radius: 15px;
+    justify-content: center;
+
+    padding: 10px 20px;
+    width: 600px;
+    margin: 0 auto;
+
+    margin-bottom: 20px;
+}
+
+/* Правило ниже по умолчанию работает всегда */
+/* .active{
+  color: lightyellow;
+  text-decoration: none;
+} */
+
+.activeLink {
+    color: lightyellow;
+    text-decoration: none;
+}
+
+.courseCard {
+    width: 200px;
+    padding: 15px;
+    background-color: aliceblue;
+    border-radius: 25px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.courseList {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    color: rgb(43, 43, 43);
+}
+
+.linkOnCourse{
+  font-size: 18px;
+  color: brown;
+}
